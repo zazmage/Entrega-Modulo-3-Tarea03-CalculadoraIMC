@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Calculadora IMC</title>
+</head>
+
+<body>
+  <header class="header-content">
+    <div class="title-container">
+      <h1 class="title">CALCULADORA IMC</h1>
+    </div>
+  </header>
+  <main class="main-content">
+    <form action="" class="form-container">
+      <div class="message-container">
+        <p class="message">Descubra su índice de masa corporal</p>
+      </div>
+      <table>
+        <tr class="table-row">
+          <td class="table-data">
+            <label for="sex" class="form-label">Sexo</label>
+          </td>
+          <td class="table-data">
+            <input type="radio" name="sex" id="male" class="radio-button">
+            <input type="radio" name="sex" id="female" class="radio-button">
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">
+            <label for="age" class="form-label">Edad</label>
+          </td>
+          <td class="table-data">
+            <input type="number" name="age" id="age" class="text-box">
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">
+            <label for="weight" class="form-label">Peso</label>
+          </td>
+          <td class="table-data">
+            <input type="number" name="weight" id="weight" class="text-box">
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">
+            <label for="height" class="form-label">Altura</label>
+          </td>
+          <td class="table-data">
+            <input type="number" name="height" id="height" class="text-box">
+          </td>
+        </tr>
+      </table>
+      <div class="button-container">
+        <input type="button" value="" class="send-button">
+      </div>
+    </form>
+    <div class="result-container">
+      <div class="title-2-container">
+        <h2 class="title-2">
+          Resultado
+        </h2>
+      </div>
+      <div class="result-number-container">
+        <p class="result-number"></p>
+      </div>
+      <div class="status-bar-container">
+        <!--TODO-->
+      </div>
+      <div class="legend-status-container">
+        <!--TODO-->
+      </div>
+    </div>
+  </main>
+  <footer class="footer-content">
+
+  </footer>
+</body>
+
+</html>
