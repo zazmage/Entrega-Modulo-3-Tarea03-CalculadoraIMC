@@ -20,14 +20,18 @@
       <div class="message-container">
         <p class="message">Descubra su índice de masa corporal</p>
       </div>
-      <table>
+      <table class="table-container">
         <tr class="table-row">
           <td class="table-data">
             <label for="sex" class="form-label">Sexo</label>
           </td>
           <td class="table-data">
-            <input type="radio" name="sex" id="male" class="radio-button">
-            <input type="radio" name="sex" id="female" class="radio-button">
+            <div class="radio-container">
+              <input type="radio" name="sex" id="male" class="radio-button">
+              <label for="male" class="radio-icon-label"><img src="icons/hombre.svg" alt="" class="radio-icon"></label>
+              <input type="radio" name="sex" id="female" class="radio-button">
+              <label for="female" class="radio-icon-label"><img src="icons/mujer.svg" alt="" class="radio-icon"></label>
+            </div>
           </td>
         </tr>
         <tr class="table-row">
@@ -79,6 +83,7 @@
   <footer class="footer-content">
 
   </footer>
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>
