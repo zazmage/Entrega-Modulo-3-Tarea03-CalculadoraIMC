@@ -10,95 +10,99 @@
 </head>
 
 <body>
-  <header class="header-content">
-    <div class="title-container">
-      <h1 class="title">CALCULADORA IMC</h1>
-    </div>
-  </header>
-  <main class="main-content">
-    <form action="" class="form-container">
-      <div class="message-container">
-        <p class="message">Descubra su índice de masa corporal</p>
+  <div class="general-container">
+    <header class="header-content">
+      <div class="title-container">
+        <h1 class="title">CALCULADORA IMC</h1>
       </div>
-      <table class="table-container">
-        <tr class="table-row">
-          <td class="table-data">
-            <label for="gender" class="form-label">Sexo</label>
-          </td>
-          <td class="table-data">
-            <div class="radio-container">
-              <input type="radio" name="gender" id="male" class="radio-button">
-              <label for="male" class="radio-icon-label"><img src="icons/hombre.svg" alt="" class="radio-icon"></label>
-              <input type="radio" name="gender" id="female" class="radio-button">
-              <label for="female" class="radio-icon-label"><img src="icons/mujer.svg" alt="" class="radio-icon"></label>
-            </div>
-          </td>
-        </tr>
-        <tr class="table-row">
-          <td class="table-data">
-            <label for="age" class="form-label">Edad</label>
-          </td>
-          <td class="table-data">
-            <input type="number" name="age" id="age" class="text-box">
-          </td>
-        </tr>
-        <tr class="table-row">
-          <td class="table-data">
-            <label for="weight" class="form-label">Peso</label>
-          </td>
-          <td class="table-data">
-            <input type="number" name="weight" id="weight" class="text-box">
-          </td>
-        </tr>
-        <tr class="table-row">
-          <td class="table-data">
-            <label for="height" class="form-label">Altura</label>
-          </td>
-          <td class="table-data">
-            <input type="number" name="height" id="height" class="text-box">
-          </td>
-        </tr>
-      </table>
-      <div class="button-container">
-        <input type="button" value="CALCULAR IMC" class="send-button">
-      </div>
-    </form>
-    <div class="result-container">
-      <div class="title-2-container">
-        <h2 class="title-2">
-          Resultado
-        </h2>
-      </div>
-      <div class="result-number-container">
-        <p class="result-number"></p>
-      </div>
-      <div class="status-bar-container">
-        <!--TODO-->
-      </div>
-      <hr class="separator">
-      <div class="message-container">
-        <p class="message">Peso ideal:</p>
-      </div>
-      <div class="legend-status-container">
-        <div class="legend-status"><img src="icons/weighing-scale.svg" alt="Weight sacle image" class="image-status"
-            id="underweight">
-          <p class="text-status">Bajo peso</p>
+    </header>
+    <main class="main-content">
+      <form action="" class="form-container">
+        <div class="message-container">
+          <p class="message">Descubra su índice de masa corporal</p>
         </div>
-        <div class="legend-status"><img src="icons/weighing-scale.svg" alt="Weight sacle image" class="image-status"
-            id="normal">
-          <p class="text-status">Saludable</p>
+        <table class="table-container">
+          <tr class="table-row">
+            <td class="table-data">
+              <label for="gender" class="form-label">Sexo</label>
+            </td>
+            <td class="table-data">
+              <div class="radio-container">
+                <input type="radio" name="gender" id="male" class="radio-button">
+                <label for="male" class="radio-icon-label"><img src="icons/hombre.svg" alt=""
+                    class="radio-icon"></label>
+                <input type="radio" name="gender" id="female" class="radio-button">
+                <label for="female" class="radio-icon-label"><img src="icons/mujer.svg" alt=""
+                    class="radio-icon"></label>
+              </div>
+            </td>
+          </tr>
+          <tr class="table-row">
+            <td class="table-data">
+              <label for="age" class="form-label">Edad</label>
+            </td>
+            <td class="table-data">
+              <input type="number" name="age" id="age" class="text-box">
+            </td>
+          </tr>
+          <tr class="table-row">
+            <td class="table-data">
+              <label for="weight" class="form-label">Peso</label>
+            </td>
+            <td class="table-data">
+              <input type="number" name="weight" id="weight" class="text-box">
+            </td>
+          </tr>
+          <tr class="table-row">
+            <td class="table-data">
+              <label for="height" class="form-label">Altura</label>
+            </td>
+            <td class="table-data">
+              <input type="number" name="height" id="height" class="text-box">
+            </td>
+          </tr>
+        </table>
+        <div class="button-container">
+          <input type="button" value="CALCULAR IMC" class="send-button">
         </div>
-        <div class="legend-status"><img src="icons/weighing-scale.svg" alt="Weight sacle image" class="image-status"
-            id="overweight">
-          <p class="text-status">Exceso de peso</p>
+      </form>
+      <div class="result-container">
+        <div class="title-2-container">
+          <h2 class="title-2">
+            Resultado
+          </h2>
         </div>
-        <div class="legend-status"><img src="icons/weighing-scale.svg" alt="Weight sacle image" class="image-status"
-            id="obese">
-          <p class="text-status">Obeso</p>
+        <div class="result-number-container">
+          <p class="result-number"></p>
+        </div>
+        <div class="status-bar-container">
+          <!--TODO-->
+        </div>
+        <hr class="separator">
+        <div class="message-container">
+          <p class="message">Peso ideal:</p>
+        </div>
+        <div class="legend-status-container">
+          <div class="legend-status"><img src="icons/weighing-scale.svg" alt="Weight sacle image" class="image-status"
+              id="underweight">
+            <p class="text-status">Bajo peso</p>
+          </div>
+          <div class="legend-status"><img src="icons/weighing-scale.svg" alt="Weight sacle image" class="image-status"
+              id="normal">
+            <p class="text-status">Saludable</p>
+          </div>
+          <div class="legend-status"><img src="icons/weighing-scale.svg" alt="Weight sacle image" class="image-status"
+              id="overweight">
+            <p class="text-status">Exceso de peso</p>
+          </div>
+          <div class="legend-status"><img src="icons/weighing-scale.svg" alt="Weight sacle image" class="image-status"
+              id="obese">
+            <p class="text-status">Obeso</p>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
+  </div>
   <footer class="footer-content">
 
   </footer>

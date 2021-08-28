@@ -19,9 +19,24 @@ https://www.flaticon.es/icono-gratis/mujer_921089?term=mujer&related_id=921089*/
   box-sizing: border-box;
 }
 
+.general-container {
+  width: 35%;
+  min-width: fit-content;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  padding-bottom: 1px;
+  box-shadow: inset 0px 0px 0px 2px var(--divider-color);
+  border-radius: 5%;
+  overflow: hidden;
+}
+
 .header-content {
   background-color: var(--default-primary-color);
   font-family: "Poppins", sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .title-container {
@@ -107,6 +122,22 @@ https://www.flaticon.es/icono-gratis/mujer_921089?term=mujer&related_id=921089*/
 }
 
 .send-button {
+  border: none;
+  background-color: var(--light-primary-color);
+  color: var(--primary-text-color);
+  font-weight: bolder;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: 0.1s;
+}
+
+.send-button:hover {
+  box-shadow: inset 0px 0px 5px 1px var(--accent-color);
+}
+
+.send-button:active {
+  transform: scale(0.9);
+  background-color: var(--accent-color);
 }
 
 .result-container {
@@ -139,9 +170,9 @@ https://www.flaticon.es/icono-gratis/mujer_921089?term=mujer&related_id=921089*/
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 20px;
-  padding-top: 20px;
+  padding-top: 15px;
   padding-left: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   border-radius: 10px;
   box-shadow: inset 0px 0px 0px 2px var(--divider-color);
 }
