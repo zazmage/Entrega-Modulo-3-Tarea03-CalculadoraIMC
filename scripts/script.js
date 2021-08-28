@@ -9,6 +9,11 @@ class imcEntry {
   }
 }
 
+const roundNumber = (num, decimals) => {
+  let fpoint = parseInt("1" + "0".repeat(decimals));
+  return Math.round((num + Number.EPSILON) * fpoint) / fpoint;
+};
+
 const resetForm = () => {
   const $gender = document.querySelectorAll(".radio-button");
   const $textData = document.querySelectorAll(".text-box");
@@ -24,10 +29,13 @@ const calcImc = () => {
   const $gender = document.querySelectorAll(".radio-button");
   const $textData = document.querySelectorAll(".text-box");
   const $resultNumber = document.querySelector(".result-number");
-  let imc = Math.round($textData[1].value / Math.pow($textData[2].value, 2), 2);
+  let imc = roundNumber(
+    $textData[1].value / Math.pow($textData[2].value, 2),
+    2
+  );
   let idealWeight = [
-    Math.round(Math.pow($textData[2].value, 2) * 18.5, 2),
-    Math.round(Math.pow($textData[2].value, 2) * 24.9, 2),
+    roundNumber(Math.pow($textData[2].value, 2) * 18.5, 2),
+    roundNumber(Math.pow($textData[2].value, 2) * 24.9, 2),
   ];
   let $genderSelected;
   $gender.forEach((i) => {

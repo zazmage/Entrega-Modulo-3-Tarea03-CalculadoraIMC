@@ -23,13 +23,13 @@
       <table class="table-container">
         <tr class="table-row">
           <td class="table-data">
-            <label for="sex" class="form-label">Sexo</label>
+            <label for="gender" class="form-label">Sexo</label>
           </td>
           <td class="table-data">
             <div class="radio-container">
-              <input type="radio" name="sex" id="male" class="radio-button">
+              <input type="radio" name="gender" id="male" class="radio-button">
               <label for="male" class="radio-icon-label"><img src="icons/hombre.svg" alt="" class="radio-icon"></label>
-              <input type="radio" name="sex" id="female" class="radio-button">
+              <input type="radio" name="gender" id="female" class="radio-button">
               <label for="female" class="radio-icon-label"><img src="icons/mujer.svg" alt="" class="radio-icon"></label>
             </div>
           </td>
@@ -60,7 +60,7 @@
         </tr>
       </table>
       <div class="button-container">
-        <input type="button" value="" class="send-button">
+        <input type="button" value="CALCULAR IMC" class="send-button">
       </div>
     </form>
     <div class="result-container">
@@ -75,8 +75,27 @@
       <div class="status-bar-container">
         <!--TODO-->
       </div>
+      <hr class="separator">
+      <div class="message-container">
+        <p class="message">Peso ideal:</p>
+      </div>
       <div class="legend-status-container">
-        <!--TODO-->
+        <div class="legend-status"><img src="icons/weighing-scale.svg" alt="Weight sacle image" class="image-status"
+            id="underweight">
+          <p class="text-status">Bajo peso</p>
+        </div>
+        <div class="legend-status"><img src="icons/weighing-scale.svg" alt="Weight sacle image" class="image-status"
+            id="normal">
+          <p class="text-status">Saludable</p>
+        </div>
+        <div class="legend-status"><img src="icons/weighing-scale.svg" alt="Weight sacle image" class="image-status"
+            id="overweight">
+          <p class="text-status">Exceso de peso</p>
+        </div>
+        <div class="legend-status"><img src="icons/weighing-scale.svg" alt="Weight sacle image" class="image-status"
+            id="obese">
+          <p class="text-status">Obeso</p>
+        </div>
       </div>
     </div>
   </main>
