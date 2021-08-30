@@ -155,6 +155,9 @@ https://www.flaticon.es/icono-gratis/mujer_921089?term=mujer&related_id=921089*/
 }
 
 .result-container {
+  display: none;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .title-2-container {

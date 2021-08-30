@@ -61,6 +61,7 @@ const statusBarControl = (imc) => {
 };
 
 const calcImc = () => {
+  const $resultContainer = document.querySelector(".result-container");
   const $gender = document.querySelectorAll(".radio-button");
   const $textData = document.querySelectorAll(".text-box");
   const $resultNumber = document.querySelector(".result-number");
@@ -79,6 +80,7 @@ const calcImc = () => {
       $genderSelected = i;
     }
   });
+  $resultContainer.style.display = "block";
   if (imc && imc !== Infinity) {
     statusBarControl(imc);
     $resultNumber.innerHTML = imc;
