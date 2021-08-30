@@ -25,10 +25,46 @@ const resetForm = () => {
   });
 };
 
+const statusBarControl = (imc) => {
+  const $statusBarIndicator = document.querySelector(".status-bar-indicator");
+  let range = [
+    [14, 18.5],
+    [18.5, 25],
+    [25, 30],
+    [30, 34.9],
+  ];
+  let percentajeColor = [
+    [0, 21.53],
+    [21.53, 52.15],
+    [52.15, 75.59],
+    [75.59, 100],
+  ];
+  for (let i = 0; i < range.length; i++) {
+    if (imc < 14) {
+      $statusBarIndicator.style.left = 0;
+    } else if (imc > 34.9) {
+      $statusBarIndicator.style.right = 0;
+    } else if (range[i][0] <= imc && imc < range[i][1]) {
+      let innerPercentaje =
+        ((imc - range[i][0]) * 100) / (range[i][1] - range[i][0]);
+      let percentaje =
+        (innerPercentaje * (percentajeColor[i][1] - percentajeColor[i][0])) /
+        100;
+      let position = percentajeColor[i][0] + percentaje;
+      console.log(innerPercentaje);
+      console.log(percentaje);
+      console.log(position);
+      $statusBarIndicator.style.left = `${position}%`;
+      break;
+    }
+  }
+};
+
 const calcImc = () => {
   const $gender = document.querySelectorAll(".radio-button");
   const $textData = document.querySelectorAll(".text-box");
   const $resultNumber = document.querySelector(".result-number");
+  const $idealWeightMessage = document.querySelector(".ideal-weight-message");
   let imc = roundNumber(
     $textData[1].value / Math.pow($textData[2].value, 2),
     2
@@ -44,7 +80,9 @@ const calcImc = () => {
     }
   });
   if (imc && imc !== Infinity) {
+    statusBarControl(imc);
     $resultNumber.innerHTML = imc;
+    $idealWeightMessage.innerHTML = `Peso ideal: ${idealWeight[0]} - ${idealWeight[1]} (KG)`;
     if ($genderSelected) {
       // gender
       if ($textData[0].value) {

@@ -44,6 +44,7 @@
             <td class="table-data">
               <input type="number" name="age" id="age" class="text-box">
             </td>
+            <td class="table-data"></td>
           </tr>
           <tr class="table-row">
             <td class="table-data">
@@ -52,6 +53,9 @@
             <td class="table-data">
               <input type="number" name="weight" id="weight" class="text-box">
             </td>
+            <td class="table-data">
+              <p class="unit-measure">KG</p>
+            </td>
           </tr>
           <tr class="table-row">
             <td class="table-data">
@@ -59,6 +63,9 @@
             </td>
             <td class="table-data">
               <input type="number" name="height" id="height" class="text-box">
+            </td>
+            <td class="table-data">
+              <p class="unit-measure">M</p>
             </td>
           </tr>
         </table>
@@ -76,11 +83,13 @@
           <p class="result-number"></p>
         </div>
         <div class="status-bar-container">
-          <!--TODO-->
+          <div class="status-bar">
+            <div class="status-bar-indicator"></div>
+          </div>
         </div>
         <hr class="separator">
         <div class="message-container">
-          <p class="message">Peso ideal:</p>
+          <p class="message ideal-weight-message">Peso ideal:</p>
         </div>
         <div class="legend-status-container">
           <div class="legend-status"><img src="icons/weighing-scale.svg" alt="Weight sacle image" class="image-status"

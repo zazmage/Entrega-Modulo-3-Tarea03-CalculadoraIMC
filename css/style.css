@@ -13,6 +13,11 @@ https://www.flaticon.es/icono-gratis/mujer_921089?term=mujer&related_id=921089*/
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
   --divider-color: #bdbdbd;
+
+  --underweight: #1c7ed3;
+  --normal: #40bc66;
+  --overweight: #faba01;
+  --obese: #f3432f;
 }
 
 * {
@@ -74,6 +79,14 @@ https://www.flaticon.es/icono-gratis/mujer_921089?term=mujer&related_id=921089*/
 
 .table-data {
   text-align: center;
+  padding-bottom: 10px;
+}
+
+.text-box {
+}
+
+.unit-measure {
+  margin: 0;
 }
 
 .form-label {
@@ -129,6 +142,7 @@ https://www.flaticon.es/icono-gratis/mujer_921089?term=mujer&related_id=921089*/
   padding: 5px 15px;
   border-radius: 5px;
   transition: 0.1s;
+  margin-bottom: 10px;
 }
 
 .send-button:hover {
@@ -145,24 +159,63 @@ https://www.flaticon.es/icono-gratis/mujer_921089?term=mujer&related_id=921089*/
 
 .title-2-container {
   text-align: center;
+  margin-bottom: 5px;
 }
 
 .title-2 {
+  margin: 0;
 }
 
 .result-number-container {
   text-align: center;
+  margin-bottom: 5px;
+  font-weight: bolder;
+  color: var(--default-primary-color);
+  font-size: 36px;
 }
 
 .result-number {
+  margin: 0;
 }
 
 .status-bar-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.status-bar {
+  position: relative;
+  width: 70%;
+  background: linear-gradient(
+    to right,
+    var(--underweight) 21.53%,
+    var(--normal) 52.15%,
+    var(--overweight) 75.59%,
+    var(--obese) 100%
+  );
+  margin-right: auto;
+  margin-left: auto;
+
+  height: 20px;
+  border-radius: 5px;
+}
+
+.status-bar-indicator {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid var(--primary-text-color);
+  top: 20px;
 }
 
 .separator {
   border: solid 1px var(--divider-color);
   width: 80%;
+}
+
+.ideal-weight-message {
 }
 
 .legend-status-container {
@@ -193,19 +246,19 @@ https://www.flaticon.es/icono-gratis/mujer_921089?term=mujer&related_id=921089*/
 }
 
 #underweight {
-  background-color: #1c7ed3;
+  background-color: var(--underweight);
 }
 
 #normal {
-  background-color: #40bc66;
+  background-color: var(--normal);
 }
 
 #overweight {
-  background-color: #faba01;
+  background-color: var(--overweight);
 }
 
 #obese {
-  background-color: #f3432f;
+  background-color: var(--obese);
 }
 
 .text-status {
