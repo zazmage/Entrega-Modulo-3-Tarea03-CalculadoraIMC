@@ -111,5 +111,15 @@ const calcImc = () => {
   }
 };
 
+function download(content, fileName, contentType) {
+  console.log("Hola");
+
+  var a = document.createElement("a");
+  var file = new Blob([content], { type: contentType });
+  a.href = URL.createObjectURL(file);
+  a.download = fileName;
+  a.click();
+}
+
 const $sendButton = document.querySelector(".send-button");
 $sendButton.addEventListener("click", calcImc);
