@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="icons/scale.svg">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Calculadora IMC</title>
@@ -17,7 +18,24 @@
         <h1 class="title">CALCULADORA IMC</h1>
       </div>
     </header>
-    <canvas id="myChart"></canvas>
+    <main class="main-content">
+      <div class="title-2-container">
+        <h2 class="title-2">
+          Estadísticas
+        </h2>
+      </div>
+      <div class="button-container">
+        <a href="index.html" class="href-button">
+          <input type="button" value="CALCULADORA" class="send-button">
+        </a>
+      </div>
+      <div class="button-container">
+        <input type="button" value="DESCARGAR DATOS" class="send-button download-button">
+      </div>
+      <div class="chart-container">
+        <canvas id="myChart"></canvas>
+      </div>
+    </main>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
   <script src="scripts/statistics.js"></script>

@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="icons/scale.svg">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Calculadora IMC</title>
@@ -23,7 +24,7 @@
         </div>
         <table class="table-container">
           <tr class="table-row">
-            <td class="table-data">
+            <td class="table-data table-data-label">
               <label for="gender" class="form-label">Sexo</label>
             </td>
             <td class="table-data">
@@ -38,33 +39,33 @@
             </td>
           </tr>
           <tr class="table-row">
-            <td class="table-data">
+            <td class="table-data table-data-label">
               <label for="age" class="form-label">Edad</label>
             </td>
             <td class="table-data">
               <input type="number" name="age" id="age" class="text-box">
             </td>
-            <td class="table-data"></td>
+            <td class="table-data table-data-label"></td>
           </tr>
           <tr class="table-row">
-            <td class="table-data">
+            <td class="table-data table-data-label">
               <label for="weight" class="form-label">Peso</label>
             </td>
             <td class="table-data">
               <input type="number" name="weight" id="weight" class="text-box">
             </td>
-            <td class="table-data">
+            <td class="table-data table-data-label">
               <p class="unit-measure">KG</p>
             </td>
           </tr>
           <tr class="table-row">
-            <td class="table-data">
+            <td class="table-data table-data-label">
               <label for="height" class="form-label">Altura</label>
             </td>
             <td class="table-data">
               <input type="number" name="height" id="height" class="text-box">
             </td>
-            <td class="table-data">
+            <td class="table-data table-data-label">
               <p class="unit-measure">M</p>
             </td>
           </tr>
@@ -73,7 +74,7 @@
           <input type="button" value="CALCULAR IMC" class="send-button">
         </div>
         <div class="button-container">
-          <a href="statistics.html" class="statistics-button">
+          <a href="statistics.html" class="href-button">
             <input type="button" value="ESTADÍSTICAS" class="send-button">
           </a>
         </div>
@@ -117,9 +118,6 @@
       </div>
     </main>
   </div>
-  <footer class="footer-content">
-
-  </footer>
   <script src="scripts/script.js"></script>
 </body>
 

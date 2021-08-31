@@ -27,13 +27,13 @@ const resetForm = () => {
 
 const statusBarControl = (imc) => {
   const $statusBarIndicator = document.querySelector(".status-bar-indicator");
-  let range = [
+  const range = [
     [14, 18.5],
     [18.5, 25],
     [25, 30],
     [30, 34.9],
   ];
-  let percentajeColor = [
+  const percentajeColor = [
     [0, 21.53],
     [21.53, 52.15],
     [52.15, 75.59],
@@ -42,8 +42,11 @@ const statusBarControl = (imc) => {
   for (let i = 0; i < range.length; i++) {
     if (imc < 14) {
       $statusBarIndicator.style.left = 0;
-    } else if (imc > 34.9) {
+      break;
+    } else if (imc >= 34.9) {
+      $statusBarIndicator.style.left = "auto";
       $statusBarIndicator.style.right = 0;
+      break;
     } else if (range[i][0] <= imc && imc < range[i][1]) {
       let innerPercentaje =
         ((imc - range[i][0]) * 100) / (range[i][1] - range[i][0]);
@@ -51,9 +54,6 @@ const statusBarControl = (imc) => {
         (innerPercentaje * (percentajeColor[i][1] - percentajeColor[i][0])) /
         100;
       let position = percentajeColor[i][0] + percentaje;
-      console.log(innerPercentaje);
-      console.log(percentaje);
-      console.log(position);
       $statusBarIndicator.style.left = `${position}%`;
       break;
     }
@@ -61,6 +61,12 @@ const statusBarControl = (imc) => {
 };
 
 const calcImc = () => {
+  const resultColors = [
+    [14, 18.5, "#1c7ed3"],
+    [18.5, 25, "#40bc66"],
+    [25, 30, "#faba01"],
+    [30, 34.9, "#f3432f"],
+  ];
   const $resultContainer = document.querySelector(".result-container");
   const $gender = document.querySelectorAll(".radio-button");
   const $textData = document.querySelectorAll(".text-box");
@@ -83,6 +89,15 @@ const calcImc = () => {
   $resultContainer.style.display = "block";
   if (imc && imc !== Infinity) {
     statusBarControl(imc);
+    for (let i = 0; i < resultColors.length; i++) {
+      if (imc < 14) {
+        $resultNumber.style.color = resultColors[0][2];
+      } else if (imc > 34.9) {
+        $resultNumber.style.color = resultColors[3][2];
+      } else if (resultColors[i][0] <= imc && imc < resultColors[i][1]) {
+        $resultNumber.style.color = resultColors[i][2];
+      }
+    }
     $resultNumber.innerHTML = imc;
     $idealWeightMessage.innerHTML = `Peso ideal: ${idealWeight[0]} - ${idealWeight[1]} (KG)`;
     if ($genderSelected) {
@@ -104,24 +119,14 @@ const calcImc = () => {
         } else {
           localStorage.setItem("dataframe", JSON.stringify([imcObject]));
         }
-        resetForm();
       }
     }
   } else {
     let errorMessage = "Porfavor ingrese su estatura y su peso";
+    $resultNumber.style.color = resultColors[3][2];
     $resultNumber.innerHTML = errorMessage;
   }
 };
-
-function download(content, fileName, contentType) {
-  console.log("Hola");
-
-  var a = document.createElement("a");
-  var file = new Blob([content], { type: contentType });
-  a.href = URL.createObjectURL(file);
-  a.download = fileName;
-  a.click();
-}
 
 const $sendButton = document.querySelector(".send-button");
 $sendButton.addEventListener("click", calcImc);

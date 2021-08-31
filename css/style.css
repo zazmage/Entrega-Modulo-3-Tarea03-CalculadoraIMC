@@ -24,6 +24,16 @@ https://www.flaticon.es/icono-gratis/mujer_921089?term=mujer&related_id=921089*/
   box-sizing: border-box;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
 .general-container {
   width: 35%;
   min-width: fit-content;
@@ -48,6 +58,7 @@ https://www.flaticon.es/icono-gratis/mujer_921089?term=mujer&related_id=921089*/
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .title {
@@ -67,6 +78,8 @@ https://www.flaticon.es/icono-gratis/mujer_921089?term=mujer&related_id=921089*/
 }
 
 .message {
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .table-container {
@@ -82,7 +95,19 @@ https://www.flaticon.es/icono-gratis/mujer_921089?term=mujer&related_id=921089*/
   padding-bottom: 10px;
 }
 
+.table-data-label {
+  text-align: left;
+}
+
 .text-box {
+  border-radius: 5px;
+  text-align: center;
+}
+
+.text-box:focus {
+  outline: none;
+  box-shadow: inset 0px 0px 0px 2px var(--default-primary-color);
+  border: solid 2px var(--default-primary-color);
 }
 
 .unit-measure {
@@ -173,7 +198,6 @@ https://www.flaticon.es/icono-gratis/mujer_921089?term=mujer&related_id=921089*/
   text-align: center;
   margin-bottom: 5px;
   font-weight: bolder;
-  color: var(--default-primary-color);
   font-size: 36px;
 }
 
@@ -270,5 +294,8 @@ https://www.flaticon.es/icono-gratis/mujer_921089?term=mujer&related_id=921089*/
   vertical-align: middle;
 }
 
-.footer-content {
+.chart-container {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
